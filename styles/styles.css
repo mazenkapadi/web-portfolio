@@ -1,3 +1,314 @@
-h1{
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: #fff; /* Changed to white background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.navbar .nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: transform 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+    transform: scale(1.1);
+    padding-bottom: 2px;
+}
+
+.navbar .logo a {
+    font-size: 25px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--accent-color);
+}
+
+.main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+.trademark {
+    display: flex;
+    align-items: center;
+}
+
+.png-text-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-links {
+    padding-top: 80px;
+    padding-left: 20px;
+}
+
+.contact-links img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: saddlebrown;
+    line-height: 32px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.contact-box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact-box button {
+    padding: 10px 20px;
+    color: saddlebrown;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-box button:hover {
+    color: beige;
+    background-color: saddlebrown;
+}
+
+.left-content {
+    flex-direction: column;
+}
+
+.right-content {
+    flex-direction: column;
+}
+
+.dividers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+:root {
+    --primary-color: #ECE2D0;
+    --secondary-color: #37505C;
+    --accent-color: saddlebrown;
+}
+
+
+h1, h2, h3, h4 {
+    margin: 20px 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 2.5em;
+    font-weight: 700; /* Bold */
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 400; /* Regular */
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: 400; /* Regular */
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 300; /* Light */
+}
+
+/* Paragraph Style */
+p {
+    font-size: 1em;
+    font-weight: 300; /* Light */
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Additional Global Styles */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Button Styles */
+.button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 1em;
+    padding: 10px 20px;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Secondary Button Style */
+.button-secondary {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.justified-box {
+    width: 80%; /* Adjust width as needed */
+    padding: 10px;
+    text-align: justify;
+    font-weight: 300; /* Light */
+    margin: 0;
+}
+
+.justified-box h2, .justified-box h4 {
+    margin: 0;
+}
+
+.justified-box::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
